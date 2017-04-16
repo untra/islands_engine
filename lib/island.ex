@@ -1,4 +1,7 @@
 defmodule IslandsEngine.Island do
+  @moduledoc """
+  An island with many coordinates, represented with a list
+  """
   alias IslandsEngine.Coordinate
 
   def start_link() do
@@ -31,4 +34,3 @@ defmodule IslandsEngine.Island do
   end
 
 end
-

@@ -1,4 +1,7 @@
 defmodule IslandsEngine.Coordinate do
+  @moduledoc """
+  Coordinate within a board, containing an island and a guess
+  """
 
   defstruct in_island: :none, guessed?: false
 
