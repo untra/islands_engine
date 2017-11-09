@@ -6,7 +6,7 @@ defmodule IslandsEngine.Board do
   alias __MODULE__
   alias IslandsEngine.{Coordinate, Island}
 
-  def new() do
+  def new do
     {:ok, %{}}
   end
 
@@ -56,14 +56,9 @@ defmodule IslandsEngine.Board do
   end
 
   defp win_check(board) do
-    if Enum.all?(Island.types, fn type ->
-      type
-      |> Board.fetch!
-      |> Island.forested?
-    end) do
-      :win
-    else
-      :no_win
+    case all_forested?(board) do
+      true  -> :win
+      false -> :no_win
     end
   end
 

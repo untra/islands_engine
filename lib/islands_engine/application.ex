@@ -10,8 +10,8 @@ defmodule IslandsEngine.Application do
 
     # Define workers and child supervisors to be supervised
     children = [
-      # Starts a worker by calling: IslandsEngine.Worker.start_link(arg1, arg2, arg3)
-      # worker(IslandsEngine.Worker, [arg1, arg2, arg3]),
+      {Registry, keys: :unique, name: Registry.Game},
+      IslandsEngine.GameSupervisor
     ]
 
     # See http://elixir-lang.org/docs/stable/elixir/Supervisor.html

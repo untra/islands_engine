@@ -7,8 +7,8 @@ defmodule CoordinateTest do
     assert Coordinate.new(0, 5)
     == {:ok, %Coordinate{row: 0, col: 5}}
   end
-  test "Coordinate.new/2  out of bounds" do
+  test "Coordinate.new/2 out of bounds" do
     assert Coordinate.new(10, -1)
-    == {:error, :invalid_coordinates}
+    == {:error, :invalid_coordinate}
   end
 end

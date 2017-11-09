@@ -22,7 +22,7 @@ defmodule IslandTest do
   test "Island.new/2 :invalid_coordinates" do
     {:ok, coordinate} = Coordinate.new(8, 8)
     assert Island.new(:s_shape, coordinate)
-    == {:error, :invalid_coordinates}
+    == {:error, :invalid_coordinate}
   end
 
   test "Island.new/2 :invalid_island" do
